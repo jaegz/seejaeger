@@ -1,11 +1,11 @@
 ---
-templateKey: 'product-page'
-path: /products
-title: Our Coffee
+templateKey: 'portfolio-page'
+path: /portfolio
+title: Portfolio
 image: /img/jumbotron.jpg
-heading: What we offer
+heading: Some of my latest work
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their java’s origin and support the farmers that grew it. We take coffee production, roasting and brewing seriously and we’re glad to pass that knowledge to anyone.
+  I maeks the best sites
 intro:
   blurbs:
     - image: /img/coffee.png
