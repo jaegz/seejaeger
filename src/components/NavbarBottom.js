@@ -11,7 +11,7 @@ export default class NavbarBottom extends Component {
 
     return (
       <Menu icon='labeled' fluid widths={4} fixed='bottom'>
-        <Menu.Item name='home' href='/' active={activeItem === 'home'} onClick={this.handleItemClick}>
+        <Menu.Item  name='home' href='/' active={activeItem === 'home'} onClick={this.handleItemClick}>
             <Icon name='home'/>
             Home
         </Menu.Item>
