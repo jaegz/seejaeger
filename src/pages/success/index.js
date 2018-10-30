@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import {Container, Divider, Grid, Section, Header, Message } from 'semantic-ui-react'
+import {Container, Grid } from 'semantic-ui-react'
 
 const SuccessPage = () => (
     <Layout>
