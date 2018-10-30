@@ -13,3 +13,5 @@ const SuccessPage = () => (
         </Grid>
     </Layout>
 )
+
+export default SuccessPage
