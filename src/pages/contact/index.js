@@ -37,7 +37,7 @@ const ContactPage = () => (
                         {/* Add action='pages/success' to redirect form submit
                         https://www.netlify.com/docs/form-handling/ */}
                         <Segment>
-                            <Form name='chrisjaeger.me contact' netlify-honeypot='bot-field' netlify>
+                            <Form name='chrisjaeger.me contact' method="POST" netlify-honeypot='bot-field' netlify>
                                 <Form.Field hidden>
                                     <label>Are you a Russian bot?</label>
                                     <input name='bot-field'/>
