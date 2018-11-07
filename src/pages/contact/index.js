@@ -28,7 +28,6 @@ export default class ContactPage extends React.Component {
     };
 
     handleSubmit = e => {
-        e.preventDefault();
         const form = e.target;
         fetch("/", {
             method: "POST",
@@ -45,22 +44,21 @@ export default class ContactPage extends React.Component {
     render() {
         return (
             <Layout>
-                <Grid centered verticalAlign='middle' style={{ marginBottom: '5em' }}>
-                    <Grid.Row>
+                {/* <Grid centered verticalAlign='middle' style={{ marginBottom: '5em' }}> */}
+                <Grid centered style={{ height: '100vh', background:'url(../img/seglswitzerland.jpg) center', backgroundSize:'cover'}}>
+                    <Grid.Row  verticalAlign='bottom'>
                         <Grid.Column>
                             <Container textAlign='center'>
                                 <Header as='h2' size='huge'>
                                     Let's get in touch
-                                    <Header.Subheader>Fill out the form below or reach out on one of these platforms:</Header.Subheader>
                                 </Header>
 
-                                <ul style={{ display: 'inline-block' }}>
-                                    <li>LinkedIn</li>
-                                    <li>Twitter</li>
-                                    <li>StackOverflow</li>
-                                    <li>GitHUb</li>
-                                    <li>Codepen</li>
-                                </ul>
+                                <Button circular inverted color='white' size='large' href='https://www.linkedin.com/in/christopher-jaeger/' icon='linkedin' />
+                                <Button circular inverted color='white' size='large' href='https://twitter.com/seejaeger' icon='twitter' />
+                                <Button circular inverted color='white' size='large' href='https://stackoverflow.com/users/2561435/jaegs' icon='stack overflow' />
+                                <Button circular inverted color='white' size='large' href='https://github.com/jaegz' icon='github' />
+                                <Button circular inverted color='white' size='large' href='https://codepen.io/jaegs/' icon='codepen' />
+
                             </Container>
                         </Grid.Column>
                     </Grid.Row>
@@ -101,7 +99,7 @@ export default class ContactPage extends React.Component {
                                             header='Action Forbidden'
                                             content='You can only sign up for an account once with a given e-mail address.'
                                         />
-                                        <Button type='submit'>Submit</Button>
+                                        <Button type='submit'>Send Message</Button>
                                     </Form>
                                 </Segment>
                             </Container>
