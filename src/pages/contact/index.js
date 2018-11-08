@@ -47,9 +47,9 @@ export default class ContactPage extends React.Component {
         return (
             <Layout>
                 {/* <Grid centered verticalAlign='middle' style={{ marginBottom: '5em' }}> */}
-                <Grid centered columns={2} style={{ height: '95vh', background:'url(../img/seglswitzerland.jpg) center', backgroundSize:'cover'}}>
+                <Grid centered style={{ height: '95vh', background:'url(../img/seglswitzerland.jpg) center', backgroundSize:'cover'}}>
                     <Grid.Row verticalAlign='bottom'>
-                        <Grid.Column>
+                        <Grid.Column mobile={16} tablet={8} computer={6} widescreen={4}>
                             <Container textAlign='center'>
                                 <Header as='h2' size='huge'>
                                     Let's get in touch
@@ -59,7 +59,7 @@ export default class ContactPage extends React.Component {
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
-                        <Grid.Column>
+                        <Grid.Column mobile={16} tablet={8} computer={6} widescreen={4}>
                             <Container>
                                 <Segment color='olive'>
                                     <Form 
