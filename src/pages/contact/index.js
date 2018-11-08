@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigateTo } from 'gatsby-link';
 import Layout from '../../components/Layout'
+import SocialButtons from '../../components/SocialButtons'
 import {
     Button, 
     Container,
@@ -10,6 +11,7 @@ import {
     Message,
     Segment,
     TextArea } from 'semantic-ui-react'
+
 
 function encode(data) {
     return Object.keys(data)
@@ -52,19 +54,14 @@ export default class ContactPage extends React.Component {
                                 <Header as='h2' size='huge'>
                                     Let's get in touch
                                 </Header>
-
-                                <Button circular inverted color='white' size='large' href='https://www.linkedin.com/in/christopher-jaeger/' icon='linkedin' />
-                                <Button circular inverted color='white' size='large' href='https://twitter.com/seejaeger' icon='twitter' />
-                                <Button circular inverted color='white' size='large' href='https://stackoverflow.com/users/2561435/jaegs' icon='stack overflow' />
-                                <Button circular inverted color='white' size='large' href='https://github.com/jaegz' icon='github' />
-                                <Button circular inverted color='white' size='large' href='https://codepen.io/jaegs/' icon='codepen' />
+                                <SocialButtons/>
                             </Container>
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
                         <Grid.Column>
                             <Container>
-                                <Segment>
+                                <Segment color='olive'>
                                     <Form 
                                         name='chrisjaeger.me contact' 
                                         method='post'
