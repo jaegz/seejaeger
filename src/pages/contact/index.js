@@ -45,8 +45,8 @@ export default class ContactPage extends React.Component {
         return (
             <Layout>
                 {/* <Grid centered verticalAlign='middle' style={{ marginBottom: '5em' }}> */}
-                <Grid centered style={{ height: '100vh', background:'url(../img/seglswitzerland.jpg) center', backgroundSize:'cover'}}>
-                    <Grid.Row  verticalAlign='bottom'>
+                <Grid centered columns={2} style={{ height: '95vh', background:'url(../img/seglswitzerland.jpg) center', backgroundSize:'cover'}}>
+                    <Grid.Row verticalAlign='bottom'>
                         <Grid.Column>
                             <Container textAlign='center'>
                                 <Header as='h2' size='huge'>
@@ -58,7 +58,6 @@ export default class ContactPage extends React.Component {
                                 <Button circular inverted color='white' size='large' href='https://stackoverflow.com/users/2561435/jaegs' icon='stack overflow' />
                                 <Button circular inverted color='white' size='large' href='https://github.com/jaegz' icon='github' />
                                 <Button circular inverted color='white' size='large' href='https://codepen.io/jaegs/' icon='codepen' />
-
                             </Container>
                         </Grid.Column>
                     </Grid.Row>
@@ -99,7 +98,7 @@ export default class ContactPage extends React.Component {
                                             header='Action Forbidden'
                                             content='You can only sign up for an account once with a given e-mail address.'
                                         />
-                                        <Button type='submit'>Send Message</Button>
+                                        <Button color="olive" type='submit'>Send Message</Button>
                                     </Form>
                                 </Segment>
                             </Container>

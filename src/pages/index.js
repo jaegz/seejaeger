@@ -6,7 +6,7 @@ export default class IndexPage extends React.Component {
     render() {
         return (
         <Layout>
-            <Grid centered style={{ height: '88vh', background:'url(../img/aplineforestgermany.jpg) center', backgroundSize:'cover'}}>
+            <Grid centered style={{ height: '95vh', background:'url(../img/aplineforestgermany.jpg) center', backgroundSize:'cover'}}>
                 <Grid.Row verticalAlign='bottom'>
                     <Grid.Column>
                         <Container textAlign='center'>
