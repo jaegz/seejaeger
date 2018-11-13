@@ -9,7 +9,7 @@ import NavbarBottom from '../components/NavbarBottom'
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="chrisjaeger.me" />
+    <Helmet title="Front End Web Developer Portfolio | chrisjaeger.me" />
     <Navbar />
     {children}
     <NavbarBottom />
