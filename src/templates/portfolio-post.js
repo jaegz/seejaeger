@@ -19,18 +19,18 @@ export const PortfolioPostTemplate = ({
     <Grid centered>
       <Helmet title={`${title} | Front End Development Portfolio`}/>
         <Grid.Row>
-          <Grid.Column mobile={16} tablet={14} computer={12} widescreen={8}>
+          <Grid.Column mobile={16} tablet={14} computer={8} widescreen={6} style={{fontSize: '1.3em', lineHeight: '1.65em'}}>
             <Container>
                 <Header as='h1' size='huge'>
                   {title}
                   <Header.Subheader>{description}</Header.Subheader>
                   <Divider />
                   
-                  {projectUrl.length > 0 &&
-                    <Button color='olive' href={projectUrl}><Icon name='external' />View project </Button>  
+                  {projectUrl &&
+                    <Button color='olive' href={projectUrl}><Icon name='external' />Visit the website </Button>  
                   }
 
-                  {blogpostUrl.length > 0 &&
+                  {blogpostUrl &&
                     <Button color='green' href={blogpostUrl}><Icon name='file alternate'/>Read write-up </Button>
                   }
                 </Header>

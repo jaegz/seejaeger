@@ -11,13 +11,13 @@ export default ({data}) => {
     return (
         <Layout>
             <Grid centered>
-                <Grid.Column mobile={16} tablet={14} computer={12} widescreen={8}>
+                <Grid.Column mobile={16} tablet={10} computer={8} widescreen={6}>
                     <Container>
                         <Header as='h1' size='huge'>Portfolio</Header>
                         <Divider/>
 
                         {data.allMarkdownRemark.edges.map(({ node }) => (
-                            <Segment color='olive' key={v4()}>
+                            <Segment raised padded='very' color='olive' key={v4()}>
                                 <Header as='h2'>
                                     {node.frontmatter.title}
                                     <Header.Subheader>{node.frontmatter.description}</Header.Subheader>

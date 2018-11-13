@@ -1,25 +1,27 @@
 ---
 templateKey: 'portfolio-post'
-title: MainStay Investments Blog
+title: New York Life Investments Blog
 description: A responsive WordPress theme built from scratch.
 projectUrl: https://mainstayinvestmentsblog.com
-blogpostUrl: test
-image: /img/jumbotron.jpg
-imageAlt: mainstay investments blog
+blogpostUrl: null
+image: /img/mainstay-investments-blog-wordpress-screenshot.jpg
+imageAlt: new york life investments blog screenshot
 summary: >- 
-  should the write up be here or downbelow as content similar to blog?
+  This project was developed for New York Life Investments to serve as the main marketing hub for up-to-date investment insights. My role in this project was Lead Developer, where I was responsible for all aspects of development (project architecture, technologies used, development team workflow, custom plugins, maintenance, etc.) and to help onboard the use of WordPress as marketing tool. I worked closely with the design team and content marketing team to reason about responsive UI/UX, customize dashboard functionality to streamline internal productivity, and to optimize peformance for our mobile users.
+
 techlist:
   - name: WordPress
   - name: Advanced Custom Fields
   - name: PHP
-  - name: jQuery
-  - name: AJAX
+  - name: Javascript
+  - name: jQuery & AJAX
   - name: Gulp
-  - name: Susy2
+  - name: Browser-sync
   - name: SASS/SCSS
   - name: HTML
+  - name: Git
   - name: Eloqua
-  - name: Pagely
+  - name: Pagely Hosting
   - name: Google Analytics
 ---
 The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
