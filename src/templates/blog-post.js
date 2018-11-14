@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import { Container, Grid, Header } from 'semantic-ui-react'
 
 export const BlogPostTemplate = ({
   content,
@@ -17,16 +18,18 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <Grid centered>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+      <Grid.Row>
+        <Grid.Column mobile={16} tablet={14} computer={8} widescreen={6} style={{ fontSize: '1.3em', lineHeight: '1.65em' }}>
+          <Container>
+            <Header as='h1' size='huge'>
               {title}
-            </h1>
-            <p>{description}</p>
+              <Header.Subheader>{description}</Header.Subheader>
+            </Header>
+
             <PostContent content={content} />
+
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
@@ -39,10 +42,10 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
-          </div>
-        </div>
-      </div>
-    </section>
+          </Container>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
   )
 }
 
