@@ -24,7 +24,20 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [],
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              // specify the maxWidth (px) of the content container
+              // this sets the base for generating different widths
+              // of each image.
+              maxWidth: 930,
+              //wrapperStyle: margin-bottom:10px; background: red;
+              // backgroundColor: white,
+              //quality: 50,
+            }
+          }
+        ],
       },
     },
     {
