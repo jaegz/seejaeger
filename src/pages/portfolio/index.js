@@ -7,7 +7,6 @@ import { Button, Container, Divider, Grid, Header, Icon, Image, Segment } from '
 import { v4 } from 'uuid'
 
 export default ({data}) => {
-    console.log(data);
     return (
         <Layout>
             <Grid centered>
