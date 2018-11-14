@@ -3,7 +3,7 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import { Button, Container, Divider, Grid, Header, Icon, Image, Segment } from 'semantic-ui-react'
+import { Button, Container, Divider, Grid, Header, Icon, Segment } from 'semantic-ui-react'
 import { v4 } from 'uuid'
 
 export default ({data}) => {
@@ -21,7 +21,7 @@ export default ({data}) => {
                                     {node.frontmatter.title}
                                     <Header.Subheader>{node.frontmatter.description}</Header.Subheader>
                                 </Header>
-                                <Image src={node.frontmatter.image}/>
+                                {/* <Image src={node.frontmatter.image}/> */}
 
                                 <Button color='olive' href={node.fields.slug} style={{marginTop: '1em'}}><Icon name='file alternate'/> Read More</Button>
                             </Segment>
@@ -42,7 +42,6 @@ export const BlogPageQuery = graphql`
                     frontmatter {
                         title
                         description
-                        image
                     }
                     fields {
                         slug
