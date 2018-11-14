@@ -13,7 +13,7 @@ tags:
   - sharp
 ---
 
-Sharp is an extremely powerful high speed Node.js module that converts large images to smaller, web-friendly images. This is a huge time saver, especially for the designers that you work with. No more cutting multiple images everytime the website needs to display a new image. Srcset is now a breeze and mobile users can appreciate that you aren't sapping all their data with a 1920x1080 images that takes 20seconds to load. There are also built in functions such as rotate and manipulating alpha channels.
+Sharp is an extremely powerful high speed Node.js module that converts large images to smaller, web-friendly images. This is a huge time saver, especially for the designers that you work with. No more cutting multiple images everytime the website needs to display a new image. Srcset is now a breeze and mobile users can appreciate that you aren't sapping all their data with a 1920x1080 images that takes 20seconds to load. There are also built in functions such as rotate, crop, fluid, duotone, grayscale, and manipulating alpha channels.
 
 Check out their documentation here:
 http://sharp.pixelplumbing.com/en/stable/
@@ -23,7 +23,7 @@ Their github repo here: https://github.com/lovell/sharp
 Using gatsby? There are plugins for that too!
 https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/?=
 https://www.gatsbyjs.org/packages/gatsby-transformer-sharp/
-
+https://image-processing.gatsbyjs.org/
 
 We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
 
