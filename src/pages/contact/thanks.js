@@ -1,7 +1,15 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 import SocialButtons from '../../components/SocialButtons'
-import {Button, Container, Divider, Header, Icon, Grid, Segment } from 'semantic-ui-react'
+import {
+    Button, 
+    Container, 
+    Divider, 
+    Header, 
+    Icon, 
+    Grid, 
+    Segment 
+} from 'semantic-ui-react'
 
 const SuccessPage = () => (
     <Layout>

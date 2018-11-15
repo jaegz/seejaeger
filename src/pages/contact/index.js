@@ -10,7 +10,8 @@ import {
     Header,
     Message,
     Segment,
-    TextArea } from 'semantic-ui-react'
+    TextArea 
+} from 'semantic-ui-react'
 
 
 function encode(data) {
@@ -22,7 +23,7 @@ function encode(data) {
 export default class ContactPage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = { isValidated: false };
     }
 
     handleChange = e => {
@@ -30,6 +31,7 @@ export default class ContactPage extends React.Component {
     };
 
     handleSubmit = e => {
+        e.preventDefault();
         const form = e.target;
         fetch("/", {
             method: "POST",
@@ -46,7 +48,6 @@ export default class ContactPage extends React.Component {
     render() {
         return (
             <Layout>
-                {/* <Grid centered verticalAlign='middle' style={{ marginBottom: '5em' }}> */}
                 <Grid centered style={{ height: '95vh', background:'url(../img/seglswitzerland.jpg) center', backgroundSize:'cover'}}>
                     <Grid.Row verticalAlign='bottom'>
                         <Grid.Column mobile={16} tablet={8} computer={6} widescreen={4}>
@@ -65,7 +66,7 @@ export default class ContactPage extends React.Component {
                                     <Form 
                                         name='chrisjaeger.me contact' 
                                         method='post'
-                                        action='/success/'
+                                        action='/contact/thanks'
                                         data-netlify='true'
                                         data-netlify-honeypot='bot-field'
                                         onSubmit={this.handleSubmit}
@@ -78,16 +79,16 @@ export default class ContactPage extends React.Component {
                                             <input name='bot-field' onChange={this.handleChange} />
                                         </Form.Field>
                                         <Form.Field required>
-                                            <label>Name</label>
-                                            <input name='name' placeholder='Name' onChange={this.handleChange}/>
+                                            <label htmlFor={'name'}>Name</label>
+                                            <input type={'text'} name={'name'} placeholder={'Name'} onChange={this.handleChange} required={true}/>
                                         </Form.Field>
                                         <Form.Field required>
-                                            <label>Email</label>
-                                            <input name='email' placeholder='your@email.com' onChange={this.handleChange}/>
+                                            <label htmlFor={'email'}>Email</label>
+                                            <input type={'email'} name={'email'} placeholder={'your@email.com'} onChange={this.handleChange} required={true}/>
                                         </Form.Field>
                                         <Form.Field required>
-                                            <label>Message</label>
-                                            <TextArea name='message' placeholder='What would you like to say?' onChange={this.handleChange} />
+                                            <label htmlFor={'message'}>Message</label>
+                                            <TextArea name={'message'} placeholder={'What would you like to say?'} onChange={this.handleChange} required={true}/>
                                         </Form.Field>
                                         <Message success header='Form Completed' content="You're all signed up for the newsletter" />
                                         <Message
@@ -106,66 +107,3 @@ export default class ContactPage extends React.Component {
         )
     }
 }
-
-
-// const ContactPage = () => (
-//     <Layout>
-//         <Grid centered verticalAlign='middle' style={{marginBottom: '5em'}}>
-//             <Grid.Row>
-//                 <Grid.Column>
-//                     <Container textAlign='center'>
-//                         <Header as='h2' size='huge'>
-//                             Let's get in touch
-//                             <Header.Subheader>Fill out the form below or reach out on one of these platforms:</Header.Subheader>
-//                         </Header>
-
-//                         <ul style={{display: 'inline-block'}}>
-//                             <li>LinkedIn</li>
-//                             <li>Twitter</li>
-//                             <li>StackOverflow</li>
-//                             <li>GitHUb</li>
-//                             <li>Codepen</li>
-//                         </ul>
-//                     </Container>
-//                 </Grid.Column>
-//             </Grid.Row>
-//             <Grid.Row>
-//                 <Grid.Column>
-//                     <Container>
-//                         <Segment>
-//                             <Form name='chrisjaeger.me contact' netlify netlify-honeypot='bot-field'>
-//                                 <Form.Field hidden>
-//                                     <input type='hidden' name='form-name' value='chrisjaeger.me contact'/>
-//                                 </Form.Field>
-//                                 <Form.Field hidden>
-//                                     <input name='bot-field'/>
-//                                 </Form.Field>
-//                                 <Form.Field required>
-//                                     <label>Name</label>
-//                                     <input name='name' placeholder='Name' />
-//                                 </Form.Field>
-//                                 <Form.Field required>
-//                                     <label>Email</label>
-//                                     <input name='email' placeholder='your@email.com' />
-//                                 </Form.Field>
-//                                 <Form.Field required>
-//                                     <label>Message</label>
-//                                     <TextArea name='message' placeholder='What would you like to say?'/>
-//                                 </Form.Field>
-//                                 <Message success header='Form Completed' content="You're all signed up for the newsletter" />
-//                                 <Message 
-//                                     error
-//                                     header='Action Forbidden'
-//                                     content='You can only sign up for an account once with a given e-mail address.'
-//                                 />
-//                                 <Button type='submit'>Submit</Button>
-//                             </Form>
-//                         </Segment>
-//                     </Container>
-//                 </Grid.Column>
-//             </Grid.Row>
-//         </Grid>
-//     </Layout>
-// )
-
-// export default ContactPage
