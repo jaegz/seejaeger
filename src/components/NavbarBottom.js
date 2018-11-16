@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
-import { Icon, Menu } from 'semantic-ui-react'
+import { 
+  Icon,
+  Menu,
+  Responsive
+} from 'semantic-ui-react'
 
 export default class NavbarBottom extends Component {
   state = {}
@@ -10,7 +14,7 @@ export default class NavbarBottom extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu icon='labeled' fluid widths={4} fixed='bottom'>
+      <Responsive as={Menu} icon='labeled' fluid widths={4} fixed='bottom' maxWidth={Responsive.onlyTablet.maxWidth}>
         <Menu.Item  name='home' href='/' active={activeItem === 'home'} onClick={this.handleItemClick}>
             <Icon name='home'/>
             Home
@@ -27,7 +31,7 @@ export default class NavbarBottom extends Component {
           <Icon name='paper plane' />
           Contact
         </Menu.Item>
-      </Menu>
+      </Responsive>
     )
   }
 }
