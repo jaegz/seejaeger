@@ -3,8 +3,16 @@ import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import { Button, Container, Divider, Grid, Header, Icon, Image } from 'semantic-ui-react'
 import { v4 } from 'uuid'
+import { 
+  Button, 
+  Container, 
+  Divider, 
+  Grid, 
+  Header, 
+  Icon, 
+  Image
+} from 'semantic-ui-react'
 
 export const PortfolioPostTemplate = ({
   title,

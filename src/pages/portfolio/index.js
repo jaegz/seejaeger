@@ -1,41 +1,96 @@
 import React from 'react'
-// import Helmet from 'react-helmet'
-// import PropTypes from 'prop-types'
+//import Helmet from 'react-helmet'
+//import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import { Button, Container, Divider, Grid, Header, Icon, Image, Segment } from 'semantic-ui-react'
-import { v4 } from 'uuid'
+//import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
+import { 
+    Button, 
+    Container, 
+    Divider, 
+    Grid, 
+    Header, 
+    Icon, 
+    Image,
+    Segment
+} from 'semantic-ui-react'
 
-export default ({data}) => {
-    return (
-        <Layout>
-            <Grid centered>
-                <Grid.Column mobile={16} tablet={10} computer={8} widescreen={6}>
-                    <Container>
-                        <Header as='h1' size='huge'>Portfolio</Header>
-                        <Divider/>
+export default class PortfolioPage extends React.Component {
+    render() {
+        const { data } = this.props
+        const { edges: posts } = data.allMarkdownRemark
 
-                        {data.allMarkdownRemark.edges.map(({ node }) => (
-                            <Segment raised padded='very' color='olive' key={v4()}>
-                                <Header as='h2'>
-                                    {node.frontmatter.title}
-                                    <Header.Subheader>{node.frontmatter.description}</Header.Subheader>
-                                </Header>
-                                <Image src={node.frontmatter.image}/>
+        return (
+            <Layout>
+                <Grid centered>
+                    <Grid.Column mobile={16} tablet={10} computer={8} widescreen={6}>
+                        <Container>
+                            <Header as='h1' size='huge'>Portfolio</Header>
+                            
+                            <Divider/>
 
-                                <Button color='olive' href={node.fields.slug} style={{marginTop: '1em'}}><Icon name='folder open'/> View Project</Button>
-                            </Segment>
-                        ))}
-                    </Container>
-                </Grid.Column>
-            </Grid>
-        </Layout>
-    )
+                            {posts.map(({ node: post }) => (
+                                <Segment raised padded='very' color='olive' key={post.id}>
+                                    <Header as='h2'>
+                                        {post.frontmatter.title}
+                                        <Header.Subheader>{post.frontmatter.description}</Header.Subheader>
+                                    </Header>
+                                    <Image src={post.frontmatter.image}/>
+                                    {/* <PreviewCompatibleImage imageInfo={post.frontmatter.image} alt={post.frontmatter.imageAlt} /> */}
+                                    
+                                    <Button color='olive' href={post.fields.slug} style={{marginTop: '1em'}}><Icon name='folder open'/> View Project</Button>
+                                </Segment>
+                            ))}
+                        </Container>
+                    </Grid.Column>
+                </Grid>
+            </Layout>
+        )
+    }
 }
 
+// Currently throwing a graphQL error
+// PropTypes for
+// gatsby-transformer-remark 
+// gatsby-remark-relative-images 
+// gatsby-remark-images gatsby-remark-
+// PortfolioPage.propTypes = {
+//     data: PropTypes.shape({
+//         allMarkdownRemark: PropTypes.shape({
+//             edges: PropTypes.arrayOf(
+//                 PropTypes.shape({
+//                     node: PropTypes.shape({
+//                         id: PropTypes.string,
+//                         frontmatter: PropTypes.shape({
+//                             title: PropTypes.string,
+//                             description: PropTypes.string,
+//                             image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+//                             imageAlt: PropTypes.string,
+//                         }),
+//                         fields: PropTypes.shape({
+//                             slug: PropTypes.string,
+//                         }),
+//                     }),
+//                 })
+//             ),
+//         }),
+//     }),
+// }
+// and the image query
+// image {
+//     childImageSharp {
+//         fluid(maxWidth: 2048, quality: 100) {
+//          ...GatsbyImageSharpFluid
+//         }
+//     }
+// }
+
+
 export const PortfolioPageQuery = graphql`
-    query {
-        allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "portfolio-post"} } }) {
+    query PortfolioQuery {
+        allMarkdownRemark(
+            filter: {frontmatter: {templateKey: {eq: "portfolio-post"} } }
+        ) {
             edges {
                 node {
                     id
@@ -43,6 +98,7 @@ export const PortfolioPageQuery = graphql`
                         title
                         description
                         image
+                        imageAlt
                     }
                     fields {
                         slug
