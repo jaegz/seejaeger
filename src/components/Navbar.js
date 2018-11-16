@@ -35,7 +35,7 @@ export default class Navbar extends Component {
 
     render() {
         const { activeItem, menuFixed, width } = this.state
-        const menuWidths = width >= Responsive.onlyComputer.minWidth ? null : 1
+        const menuWidths = width >= Responsive.onlyTablet.maxWidth ? null : 1
 
         return (
             <Visibility
@@ -47,9 +47,10 @@ export default class Navbar extends Component {
             <Responsive as={Menu}  
                 borderless
                 inverted={menuFixed ? false : true}
-                style={menuStyle}
+                // style={menuStyle}
                 fixed={'top'}
                 style={menuFixed ? fixedMenuStyle : menuStyle}
+                fireOnMount
                 onUpdate={this.handleOnUpdate}
                 widths={menuWidths}
             >
