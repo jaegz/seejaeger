@@ -12,7 +12,6 @@ const menuStyle = {
     borderRadius: 0,
     boxShadow: 'none',
     marginBottom: '1em',
-    // marginTop: '1em',
     backgroundColor: 'transparent',
     transition: 'box-shadow 0.5s ease, padding 0.5s ease',
 }
@@ -45,12 +44,10 @@ export default class Navbar extends Component {
                 offset={[0, -50]}
                 once={false}
             >
-            {/* <Menu */}
             <Responsive as={Menu}  
                 borderless
                 inverted={menuFixed ? false : true}
                 style={menuStyle}
-                // fixed={menuFixed ? 'top' : undefined}
                 fixed={'top'}
                 style={menuFixed ? fixedMenuStyle : menuStyle}
                 onUpdate={this.handleOnUpdate}
@@ -61,7 +58,6 @@ export default class Navbar extends Component {
                         <Icon name='terminal' />
                         CHRIS JAEGER
                     </Menu.Item>
-                    {/* <Menu.Menu position='right'> */}
                     <Responsive as={Menu.Menu} position='right' {...Responsive.onlyComputer}>
                         <Menu.Item name='home' href='/' active={activeItem === 'home'} onClick={this.handleItemClick}>
                             HOME
@@ -75,10 +71,8 @@ export default class Navbar extends Component {
                         <Menu.Item name='contact' href='/contact' active={activeItem === 'contact'} onClick={this.handleItemClick}>
                             CONTACT
                         </Menu.Item>
-                    {/* </Menu.Menu> */}
                     </Responsive>
                 </Container>
-            {/* </Menu> */}
             </Responsive>
         </Visibility>
         )
