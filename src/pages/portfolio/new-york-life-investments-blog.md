@@ -3,7 +3,7 @@ templateKey: 'portfolio-post'
 title: New York Life Investments Blog
 description: A responsive WordPress theme built from scratch.
 projectUrl: https://mainstayinvestmentsblog.com
-blogpostUrl: null
+blogpostUrl: test
 image: /img/mainstay-investments-blog-wordpress-screenshot.jpg
 imageAlt: new york life investments blog screenshot
 summary: >- 
