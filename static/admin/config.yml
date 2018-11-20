@@ -2,16 +2,17 @@ backend:
   name: git-gateway
   branch: master
 
+publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
+  - name: "blog" #used in routes, eg. /admin/collections/blog
+    label: "Blog" #used in the UI
+    folder: "src/pages/blog" # path to the folder where the docs are stored
+    create: true #allow users to create new docs in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" #filename template eg. YYYY-MM-DD-title.md
+    fields: # fields for each doc, usually in front matter
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -19,18 +20,37 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "src/pages/portfolio/index.md"
-        label: "Portfolio Page"
-        name: "projects"
-        fields:
-          - {label: title, name: title, widget: string}
-          - {label: projectUrl, name: projectUrl, widget: string}
-          - {label: blogpostUrl, name: blogpostUrl, widget: string}
-          - {label: image, name: image, widget: string}
-          - {label: imageAlt, name: imageAlt, widget: string}
-          - {label: description, name: description, widget: string}
-          - {label: summary, name: summary, widget: string}
-          - {label: techlist, name: techlist, widget: list}
+  - name: "portfolio" #used in routes, eg. /admin/collections/blog
+    label: "Portfolio" #used in the UI
+    folder: "src/pages/portfolio" # path to the folder where the docs are stored
+    create: true #allow users to create new docs in this collection
+    slug: "{{slug}}" #filename template eg. YYYY-MM-DD-title.md
+    fields: # fields for each doc, usually in front matter
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "portfolio-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: image, name: image, widget: string}
+      - {label: imageAlt, name: imageAlt, widget: string}
+      - {label: summary, name: summary, widget: string}
+      - {label: techlist, name: techlist, widget: list}
+
+  # - name: "pages"
+  #   label: "Pages"
+  #   files:
+  #     - file: "src/pages/contact/index.md"
+  #       label: "Contact Page"
+  #       name: "contact"
+  #       fields:
+  #         - {label: title, name: title, widget: string}
+  #     - file: "src/pages/index.md"
+  #       label: "Home Page"
+  #       name: "home"
+  #       fields: 
+  #         - {label: Header, name: header, widget: string}
+  #         - {label: Subheader, name: subheader, widget: string}
+  #         - {label: Button 1 Text, name: btn1text, widget: string}
+  #         - {label: Button 1 Path, name: btn1path, widget: string}
+  #         - {label: Button 2 Text, name: btn2text, widget: string}
+  #         - {label: Button 2 Path, name: btn2path, widget: string}
+
