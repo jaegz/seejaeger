@@ -13,4 +13,5 @@ tags:
   - navigation
 ---
 
-Full write-up coming soon
+Full write-up coming soon, no results when searching for `semantic ui responsive menu icon center`
+This can help people with that.
