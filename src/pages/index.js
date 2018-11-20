@@ -6,7 +6,7 @@ const heroStyle = {
     height: '100vh',
     background: 'url(../img/aplineforestgermany.jpg) center', 
     backgroundSize: 'cover',
-    paddingTop: '10em'
+    paddingTop: '4.3em'
 }
 
 export default class IndexPage extends React.Component {

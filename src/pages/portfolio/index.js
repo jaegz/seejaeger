@@ -7,13 +7,17 @@ import Layout from '../../components/Layout'
 import { 
     Button, 
     Container, 
-    Divider, 
     Grid, 
     Header, 
     Icon, 
     Image,
     Segment
 } from 'semantic-ui-react'
+
+const navbarOffset = {
+    //paddingTop: '4.3em',
+    paddingTop: '7em',
+}
 
 export default class PortfolioPage extends React.Component {
     render() {
@@ -23,26 +27,26 @@ export default class PortfolioPage extends React.Component {
         return (
             <Layout>
                 <Grid centered>
-                    <Grid.Column mobile={16} tablet={10} computer={8} widescreen={6}>
-                        <Container>
-                            <Header as='h1' size='huge'>Portfolio</Header>
-                            
-                            <Divider/>
+                    <Grid.Row style={navbarOffset}>
+                        <Grid.Column>
+                            <Container text>
+                                <Header as='h1' size='huge'>Front End Development Portfolio</Header>
 
-                            {posts.map(({ node: post }) => (
-                                <Segment raised padded='very' color='olive' key={post.id}>
-                                    <Header as='h2'>
-                                        {post.frontmatter.title}
-                                        <Header.Subheader>{post.frontmatter.description}</Header.Subheader>
-                                    </Header>
-                                    <Image src={post.frontmatter.image}/>
-                                    {/* <PreviewCompatibleImage imageInfo={post.frontmatter.image} alt={post.frontmatter.imageAlt} /> */}
-                                    
-                                    <Button color='olive' href={post.fields.slug} style={{marginTop: '1em'}}><Icon name='folder open'/> View Project</Button>
-                                </Segment>
-                            ))}
-                        </Container>
-                    </Grid.Column>
+                                {posts.map(({ node: post }) => (
+                                    <Segment raised padded='very' color='green' key={post.id}>
+                                        <Header as='h2'>
+                                            {post.frontmatter.title}
+                                            <Header.Subheader>{post.frontmatter.description}</Header.Subheader>
+                                        </Header>
+                                        <Image src={post.frontmatter.image}/>
+                                        {/* <PreviewCompatibleImage imageInfo={post.frontmatter.image} alt={post.frontmatter.imageAlt} /> */}
+                                        
+                                        <Button color='green' href={post.fields.slug} style={{marginTop: '1em'}}><Icon name='folder open'/> View Project</Button>
+                                    </Segment>
+                                ))}
+                            </Container>
+                        </Grid.Column>
+                    </Grid.Row>
                 </Grid>
             </Layout>
         )

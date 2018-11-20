@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby'
 import { 
   Icon,
   Menu,
@@ -6,28 +7,24 @@ import {
 } from 'semantic-ui-react'
 
 export default class NavbarBottom extends Component {
-  state = {}
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
-    const { activeItem } = this.state
 
     return (
       <Responsive as={Menu} icon='labeled' fluid widths={4} fixed='bottom' maxWidth={Responsive.onlyTablet.maxWidth}>
-        <Menu.Item  name='home' href='/' active={activeItem === 'home'} onClick={this.handleItemClick}>
-            <Icon name='home'/>
-            Home
+        <Menu.Item as={Link} activeClassName='active' to='/'>
+          <Icon name='home' />
+          Home
         </Menu.Item>
-        <Menu.Item name='portfolio' href='/portfolio' active={activeItem === 'portfolio'} onClick={this.handleItemClick}>
-          <Icon name='folder open'/>
+        <Menu.Item as={Link} activeClassName='active' to='portfolio'>
+          <Icon name='folder open' />
           Portfolio
         </Menu.Item>
-        <Menu.Item name='blog' href='/blog' active={activeItem === 'blog'} onClick={this.handleItemClick}>
+        <Menu.Item as={Link} activeClassName='active' to='blog'>
           <Icon name='file alternate' />
           Blog
         </Menu.Item>
-        <Menu.Item name='contact' href='/contact' active={activeItem === 'contact'} onClick={this.handleItemClick}>
+        <Menu.Item as={Link} activeClassName='active' to='contact'>
           <Icon name='paper plane' />
           Contact
         </Menu.Item>

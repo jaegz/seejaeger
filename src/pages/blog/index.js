@@ -3,33 +3,39 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import { Button, Container, Divider, Grid, Header, Icon, Segment } from 'semantic-ui-react'
+import { Button, Container, Grid, Header, Icon, Segment } from 'semantic-ui-react'
 import { v4 } from 'uuid'
+
+const navbarOffset = {
+    // paddingTop: '4.3em',
+    paddingTop: '7em'
+}
 
 export default ({data}) => {
     return (
-        <Layout>
-            <Grid centered>
-                <Grid.Column mobile={16} tablet={10} computer={8} widescreen={6}>
-                    <Container>
+    <Layout>
+        <Grid centered>
+            <Grid.Row style={navbarOffset}>
+                <Grid.Column>
+                    <Container text>
                         <Header as='h1' size='huge'>Blog</Header>
-                        <Divider/>
 
                         {data.allMarkdownRemark.edges.map(({ node }) => (
-                            <Segment raised padded='very' color='olive' key={v4()}>
+                            <Segment raised padded='very' color='green' key={v4()}>
                                 <Header as='h2'>
                                     {node.frontmatter.title}
-                                    <Header.Subheader>{node.frontmatter.description}</Header.Subheader>
+                                    {/* <Header.Subheader>{node.frontmatter.description}</Header.Subheader> */}
                                 </Header>
                                 {/* <Image src={node.frontmatter.image}/> */}
 
-                                <Button color='olive' href={node.fields.slug} style={{marginTop: '1em'}}><Icon name='file alternate'/> Read More</Button>
+                                <Button color='green' href={node.fields.slug} style={{ marginTop: '1em' }}><Icon name='file alternate' /> Read More</Button>
                             </Segment>
                         ))}
                     </Container>
                 </Grid.Column>
-            </Grid>
-        </Layout>
+            </Grid.Row>
+        </Grid>
+    </Layout>
     )
 }
 

@@ -7,6 +7,11 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import { Container, Grid, Header } from 'semantic-ui-react'
 
+const navbarOffset = {
+  // paddingTop: '4.3em',
+  paddingTop: '7em',
+}
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -20,9 +25,9 @@ export const BlogPostTemplate = ({
   return (
     <Grid centered>
       {helmet || ''}
-      <Grid.Row>
-        <Grid.Column mobile={16} tablet={14} computer={8} widescreen={6} style={{ fontSize: '1.3em', lineHeight: '1.65em' }}>
-          <Container>
+      <Grid.Row style={navbarOffset}>
+        <Grid.Column>
+          <Container text>
             <Header as='h1' size='huge'>
               {title}
               <Header.Subheader>{description}</Header.Subheader>

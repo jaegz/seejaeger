@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link, withPrefix } from 'gatsby'
 import { 
     Container,
     Icon,
@@ -22,10 +23,8 @@ const fixedMenuStyle = {
     boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.2)',
 }
 
-
 export default class Navbar extends Component {
     state = { 
-        activeItem: 'home',
         menuFixed: false,
     }
     
@@ -34,8 +33,9 @@ export default class Navbar extends Component {
     handleOnUpdate = (e, { width }) => this.setState({ width })
 
     render() {
-        const { activeItem, menuFixed, width } = this.state
+        const { menuFixed, width } = this.state
         const menuWidths = width >= Responsive.onlyTablet.maxWidth ? null : 1
+        const isHomepage = window.location.pathname === withPrefix("/");
 
         return (
             <Visibility
@@ -46,8 +46,7 @@ export default class Navbar extends Component {
             >
             <Responsive as={Menu}  
                 borderless
-                inverted={menuFixed ? false : true}
-                // style={menuStyle}
+                inverted={menuFixed || !isHomepage ? false : true}
                 fixed={'top'}
                 style={menuFixed ? fixedMenuStyle : menuStyle}
                 fireOnMount
@@ -55,23 +54,15 @@ export default class Navbar extends Component {
                 widths={menuWidths}
             >
                 <Container text >
-                    <Menu.Item header>
+                    <Menu.Item header as={Link} to='/'>
                         <Icon name='terminal' />
                         CHRIS JAEGER
                     </Menu.Item>
+                 
                     <Responsive as={Menu.Menu} position='right' {...Responsive.onlyComputer}>
-                        <Menu.Item name='home' href='/' active={activeItem === 'home'} onClick={this.handleItemClick}>
-                            HOME
-                        </Menu.Item>
-                        <Menu.Item name='portfolio' href='/portfolio' active={activeItem === 'portfolio'} onClick={this.handleItemClick}>
-                            PORTFOLIO
-                        </Menu.Item>
-                        <Menu.Item name='blog' href='/blog' active={activeItem === 'blog'} onClick={this.handleItemClick}>
-                            BLOG
-                        </Menu.Item>
-                        <Menu.Item name='contact' href='/contact' active={activeItem === 'contact'} onClick={this.handleItemClick}>
-                            CONTACT
-                        </Menu.Item>
+                        <Menu.Item as={Link} activeClassName='active' to='blog'>BLOG</Menu.Item>
+                        <Menu.Item as={Link} activeClassName='active' to='portfolio'>PORTFOLIO</Menu.Item>
+                        <Menu.Item as={Link} activeClassName='active' to='contact'>CONTACT</Menu.Item>
                     </Responsive>
                 </Container>
             </Responsive>
