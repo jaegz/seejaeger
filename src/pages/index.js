@@ -13,13 +13,13 @@ export default class IndexPage extends React.Component {
     render() {
         return (
         <Layout>
-            <Grid centered>
+            <Grid verticalAlign='middle' centered>
                 <Grid.Row style={heroStyle}>
                     <Grid.Column>
                         <Container text textAlign='center'>
-                            <Header inverted as='h1' size='huge'>
-                                A CRAFTSMAN OF THE WEB
-                                <Header.Subheader>Hello, my name is Chris and I help companies deliver impactful digital experiences</Header.Subheader>
+                            <Header inverted as='h1' size='large'>
+                                CRAFTSMAN OF THE WEB
+                                <Header.Subheader size='large'>Hello, my name is Chris and I help companies deliver impactful digital experiences</Header.Subheader>
                             </Header>
                             <Divider/>
                             <Container text textAlign='center'>
@@ -29,8 +29,8 @@ export default class IndexPage extends React.Component {
                         </Container>
                     </Grid.Column>
                 </Grid.Row>
-                <Grid.Row verticalAlign='bottom' style={{ height: '100vh', background: 'url(../img/seglswitzerland.jpg) center', backgroundSize: 'cover' }}>
-                </Grid.Row>
+                {/* <Grid.Row verticalAlign='bottom' style={{ height: '100vh', background: 'url(../img/seglswitzerland.jpg) center', backgroundSize: 'cover' }}>
+                </Grid.Row> */}
             </Grid>
         </Layout>
         )

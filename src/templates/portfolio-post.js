@@ -14,6 +14,10 @@ import {
   Image
 } from 'semantic-ui-react'
 
+const navbarOffset = {
+  paddingTop: '7em'
+}
+
 export const PortfolioPostTemplate = ({
   title,
   description,
@@ -26,9 +30,9 @@ export const PortfolioPostTemplate = ({
 }) => (
     <Grid centered>
       <Helmet title={`${title} | Front End Development Portfolio`}/>
-        <Grid.Row>
-          <Grid.Column mobile={16} tablet={14} computer={8} widescreen={6} style={{fontSize: '1.3em', lineHeight: '1.65em'}}>
-            <Container>
+        <Grid.Row style={navbarOffset}>
+          <Grid.Column>
+            <Container text>
                 <Header as='h1' size='huge'>
                   {title}
                   <Header.Subheader>{description}</Header.Subheader>
@@ -77,7 +81,7 @@ PortfolioPostTemplate.propTypes = {
   imageAlt: PropTypes.string,
   description: PropTypes.string,
   summary: PropTypes.string,
-  techlist: PropTypes.array,
+  // techlist: PropTypes.array,
 }
 
 const PortfolioPost = ({ data }) => {

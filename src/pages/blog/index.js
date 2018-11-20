@@ -7,7 +7,6 @@ import { Button, Container, Grid, Header, Icon, Segment } from 'semantic-ui-reac
 import { v4 } from 'uuid'
 
 const navbarOffset = {
-    // paddingTop: '4.3em',
     paddingTop: '7em'
 }
 

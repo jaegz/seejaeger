@@ -8,7 +8,6 @@ import Content, { HTMLContent } from '../components/Content'
 import { Container, Grid, Header } from 'semantic-ui-react'
 
 const navbarOffset = {
-  // paddingTop: '4.3em',
   paddingTop: '7em',
 }
 

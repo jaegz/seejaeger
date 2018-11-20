@@ -8,6 +8,7 @@ import {
     Form, 
     Grid,
     Header,
+    Icon,
     Message,
     Segment,
     TextArea 
@@ -48,21 +49,17 @@ export default class ContactPage extends React.Component {
     render() {
         return (
             <Layout>
-                <Grid centered style={{ height: '95vh', background:'url(../img/seglswitzerland.jpg) center', backgroundSize:'cover'}}>
-                    <Grid.Row verticalAlign='bottom'>
-                        <Grid.Column mobile={16} tablet={8} computer={6} widescreen={4}>
-                            <Container textAlign='center'>
-                                <Header as='h2' size='huge'>
-                                    Let's get in touch
-                                </Header>
-                                <SocialButtons/>
-                            </Container>
-                        </Grid.Column>
-                    </Grid.Row>
+                <Grid verticalAlign='middle' centered style={{ height: '100vh', background:'url(../img/seglswitzerland.jpg) center', backgroundSize:'cover'}}>
                     <Grid.Row>
-                        <Grid.Column mobile={16} tablet={8} computer={6} widescreen={4}>
-                            <Container>
-                                <Segment color='olive'>
+                        <Grid.Column>
+                            <Container text>
+                                <Container textAlign='center'>
+                                    <Header as='h2' size='huge'>
+                                        Let's get in touch
+                                    </Header>
+                                    <SocialButtons />
+                                </Container>
+                                <Segment color='green'>
                                     <Form 
                                         name='chrisjaeger.me contact' 
                                         method='post'
@@ -96,7 +93,7 @@ export default class ContactPage extends React.Component {
                                             header='Action Forbidden'
                                             content='You can only sign up for an account once with a given e-mail address.'
                                         />
-                                        <Button color="olive" type='submit'>Send Message</Button>
+                                        <Button color="green" type='submit'><Icon name='paper plane'/>Send Message</Button>
                                     </Form>
                                 </Segment>
                             </Container>
