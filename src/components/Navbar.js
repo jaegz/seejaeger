@@ -35,7 +35,7 @@ export default class Navbar extends Component {
     render() {
         const { menuFixed, width } = this.state
         const menuWidths = width >= Responsive.onlyTablet.maxWidth ? null : 1
-        const isHomepage = window.location.pathname === withPrefix("/");
+        const isHomepage = typeof window !== 'undefined' && window.location.pathname === withPrefix("/");
 
         return (
             <Visibility
