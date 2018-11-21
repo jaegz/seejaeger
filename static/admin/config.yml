@@ -30,8 +30,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Project Url", name: "projectUrl", widget: "string"}
-      - {label: "Project Blog Post", name: "blogpostUrl", widget: "string"}
+      - {label: "Project Url", name: "projectUrl", widget: "string", required: "false"}
+      - {label: "Project Blog Post", name: "blogpostUrl", widget: "string", required: "false"}
       - {label: "image", name: "image", widget: "image"}
       - {label: "imageAlt", name: imageAlt, widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
