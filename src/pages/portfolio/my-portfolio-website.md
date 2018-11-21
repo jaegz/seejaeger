@@ -6,15 +6,17 @@ projectUrl: test
 blogpostUrl: addthiswhenyoupostit
 image: /img/jumbotron.jpg
 imageAlt: screenshot of chrisjaeger.me
-summary: >- 
-  should the write up be here or downbelow as content similar to blog?
-techlist:
-  - name: GatsbyJS
-  - name: Netlify
-  - name: NetlifyCMS
-  - name: ReactJS
-  - name: JavaScript ES6
-  - name: JSX
-  - name: Semantic UI React
-  - name: Google Analytics
+tags:
+  - GatsbyJS
+  - Netlify
+  - NetlifyCMS
+  - ReactJS
+  - JavaScript ES6
+  - JSX
+  - Semantic UI React
+  - Google Analytics
 ---
+
+## Project Summary
+-----
+should the write up be here or downbelow as content similar to blog?

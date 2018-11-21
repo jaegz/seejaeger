@@ -30,10 +30,10 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: image, name: image, widget: string}
-      - {label: imageAlt, name: imageAlt, widget: string}
-      - {label: summary, name: summary, widget: string}
-      - {label: techlist, name: techlist, widget: list}
+      - {label: "image", name: "image", widget: "string"}
+      - {label: "imageAlt", name: imageAlt, widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
 
   # - name: "pages"
   #   label: "Pages"

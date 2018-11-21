@@ -5,7 +5,11 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import { Container, Grid, Header } from 'semantic-ui-react'
+import { 
+  Container, 
+  Grid, 
+  Header 
+} from 'semantic-ui-react'
 
 const navbarOffset = {
   paddingTop: '7em',

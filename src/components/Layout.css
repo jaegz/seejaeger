@@ -1,5 +1,13 @@
-/* p,
-.sub.header {
-    font-size: 1.3em;
-    line-height: 1.65em;
-} */
+
+/* Markdown Styles / Can I extend these from semantic ui react? */
+
+hr {
+    margin: 1rem 0;
+    line-height: 1;
+    height: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    border-top: 1px solid rgba(34,36,38,.15);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}

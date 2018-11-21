@@ -3,8 +3,15 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import { Button, Container, Grid, Header, Icon, Segment } from 'semantic-ui-react'
 import { v4 } from 'uuid'
+import { 
+    Button, 
+    Container, 
+    Grid, 
+    Header, 
+    Icon, 
+    Segment 
+} from 'semantic-ui-react'
 
 const navbarOffset = {
     paddingTop: '7em'

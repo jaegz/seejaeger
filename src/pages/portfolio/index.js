@@ -15,7 +15,6 @@ import {
 } from 'semantic-ui-react'
 
 const navbarOffset = {
-    //paddingTop: '4.3em',
     paddingTop: '7em',
 }
 
