@@ -3,7 +3,9 @@ templateKey: portfolio-post
 title: IndexIQ ETFs Microsite
 description: Essential resource for a large marketing campaign
 date: 2018-11-21T20:06:44.920Z
-image: 'null'
+projectUrl: 'null'
+blogpostUrl: 'null'
+image: /img/indexiq-microsite.jpg
 imageAlt: indexiq microsite
 tags:
   - css grid
