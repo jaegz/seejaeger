@@ -3,20 +3,32 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import {
+  Container,
+  Divider,
+  Grid,
+  Header,
+} from 'semantic-ui-react'
+
+const navbarOffset = {
+  paddingTop: '7em'
+}
 
 const TagsPage = ({
   data: { allMarkdownRemark: { group }, site: { siteMetadata: { title } } },
 }) => (
   <Layout>
-    <section className="section">
+    <Grid centered>
       <Helmet title={`Tags | ${title}`} />
-      <div className="container content">
-        <div className="columns">
-          <div
-            className="column is-10 is-offset-1"
-            style={{ marginBottom: '6rem' }}
-          >
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
+      <Grid.Row style={navbarOffset}>
+        <Grid.Column>
+          <Container text>
+            <Header as='h1' size='huge'>
+              Tags
+            </Header>
+
+            <Divider/>
+
             <ul className="taglist">
               {group.map(tag => (
                 <li key={tag.fieldValue}>
@@ -26,10 +38,10 @@ const TagsPage = ({
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+          </Container>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
   </Layout>
 )
 

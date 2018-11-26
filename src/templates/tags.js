@@ -2,6 +2,16 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import {
+  Container,
+  Divider,
+  Grid,
+  Header,
+} from 'semantic-ui-react'
+
+const navbarOffset = {
+  paddingTop: '7em'
+}
 
 class TagRoute extends React.Component {
   render() {
@@ -22,23 +32,24 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
+        <Grid centered>
           <Helmet title={`${tag} | ${title}`} />
-          <div className="container content">
-            <div className="columns">
-              <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: '6rem' }}
-              >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
+          <Grid.Row style={navbarOffset}>
+            <Grid.Column>
+              <Container text>
+                <Header as='h3'>{tagHeader}</Header>
+                
+                <Divider/>
+                
                 <ul className="taglist">{postLinks}</ul>
                 <p>
                   <Link to="/tags/">Browse all tags</Link>
                 </p>
-              </div>
-            </div>
-          </div>
-        </section>
+
+              </Container>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </Layout>
     )
   }
