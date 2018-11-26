@@ -11,7 +11,7 @@ tags:
 ---
 <!-- !\\[flavor wheel](/img/flavor_wheel.jpg =100%x) -->
 
-<img src="/img/flavor_wheel.jpg" width="100%" style="margin-bottom:1em"/>
+<img src="/img/bare-repo-screenshot.jpg" width="100%" style="margin-bottom:1em"/>
 
 The last development team I worked on was not using any version control (source code management) tools and rather just keeping project folders scattered around on an internal network drive. This isn't so bad when there are only one or two developers, but as the team began to expand, we needed a better solution. I proposed that we begin using git to help streamline our workflow and to avoid stepping on each other's toes when making changes or adding new features to a project. The team agreed and I lead the effort of getting our colleagues set up with git, formulating some type of workflow, and training them on how to use it. This article sheds some light on how we did it.
 
@@ -19,7 +19,8 @@ The last development team I worked on was not using any version control (source 
 
 From their [website](https://git-scm.com/):
 
-> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
+> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+ Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
 
 ## Install Git
 
