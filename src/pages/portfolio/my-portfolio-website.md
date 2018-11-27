@@ -4,7 +4,7 @@ title: My Portfolio Website
 description: A JAMstack website for my blog and portfolio.
 projectUrl: test
 blogpostUrl: addthiswhenyoupostit
-image: /img/jumbotron.jpg
+image: /img/chrisjaegerme-screenshot.jpg
 imageAlt: screenshot of chrisjaeger.me
 tags:
   - GatsbyJS
