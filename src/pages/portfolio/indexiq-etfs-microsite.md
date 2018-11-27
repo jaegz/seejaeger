@@ -1,10 +1,10 @@
 ---
 templateKey: portfolio-post
 title: IndexIQ ETFs Microsite
-description: Essential resource for a large marketing campaign
+description: A Single Page Application (SPA) built with CSS Grid
 date: 2018-11-21T20:06:44.920Z
-projectUrl: 'null'
-blogpostUrl: 'null'
+projectUrl: 'https://www.iqchaikinetfs.com'
+blogpostUrl: null
 image: /img/indexiq-microsite.jpg
 imageAlt: indexiq microsite
 tags:

@@ -47,7 +47,10 @@ export default ({data}) => {
 
 export const BlogPageQuery = graphql`
     query {
-        allMarkdownRemark (filter: {frontmatter: {templateKey: {eq: "blog-post"} } }) {
+        allMarkdownRemark (
+            filter: {frontmatter: {templateKey: {eq: "blog-post"} } }
+            sort: { fields: [frontmatter___date], order: DESC}
+        ) {
             edges {
                 node {
                     id

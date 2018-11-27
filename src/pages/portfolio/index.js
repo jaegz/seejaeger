@@ -93,6 +93,7 @@ export const PortfolioPageQuery = graphql`
     query PortfolioQuery {
         allMarkdownRemark(
             filter: {frontmatter: {templateKey: {eq: "portfolio-post"} } }
+            sort: { fields: [frontmatter___date], order: DESC}
         ) {
             edges {
                 node {

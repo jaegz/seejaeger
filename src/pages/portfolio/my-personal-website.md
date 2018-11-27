@@ -2,8 +2,9 @@
 templateKey: 'portfolio-post'
 title: My Personal Website
 description: A JAMstack website built with GatsbyJS and Netlify CMS.
-projectUrl: test
-blogpostUrl: addthiswhenyoupostit
+date: 2018-11-27 17:56:08
+projectUrl: https://www.chrisjaeger.me
+blogpostUrl: null
 image: /img/chrisjaegerme-screenshot.jpg
 imageAlt: screenshot of chrisjaeger.me
 tags:
