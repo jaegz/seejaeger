@@ -74,6 +74,20 @@ module.exports = {
         cookieDomain: "chrisjaeger.me",
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'chrisjaeger',
+        short_name: 'chrisjaeger',
+        description: 'Front End Web Developer Portfolio and Blog',
+        start_url: '/',
+        background_color: '#444444',
+        theme_color: '#145314',
+        display: 'minimal-ui',
+        icon: 'src/img/cj-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    'gatsby-plugin-offline', // make sure to list this after plugin-manifest
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
