@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'Front End Web Developer Portfolio | chrisjaeger.me',
+    description: `A collection of my latest front end development and design work. I help companies deliver impactful digital experiences.`,
+    url: 'https://www.chrisjaeger.me',
+    twitterUsername: '@seejaeger'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
