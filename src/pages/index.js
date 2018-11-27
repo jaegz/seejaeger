@@ -4,7 +4,7 @@ import { Button, Container, Divider, Grid, Header } from 'semantic-ui-react';
 
 const heroStyle = {
     height: '100vh',
-    background: 'url(../img/aplineforestgermany.jpg) center', 
+    background: 'url(../img/aplineforestgermany.jpg) center',
     backgroundSize: 'cover',
     paddingTop: '4.3em'
 }
