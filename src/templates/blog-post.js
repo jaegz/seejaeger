@@ -10,6 +10,7 @@ import {
   Grid, 
   Header 
 } from 'semantic-ui-react'
+import '../utils/prismjs-theme.css'
 
 const navbarOffset = {
   paddingTop: '7em',
