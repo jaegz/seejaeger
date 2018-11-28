@@ -4,7 +4,7 @@ title: My Personal Website
 description: A JAMstack website built with GatsbyJS and Netlify CMS.
 date: 2018-11-27 17:56:08
 projectUrl: https://www.chrisjaeger.me
-blogpostUrl: null
+blogpostUrl: test
 image: /img/chrisjaegerme-screenshot.jpg
 imageAlt: screenshot of chrisjaeger.me
 tags:

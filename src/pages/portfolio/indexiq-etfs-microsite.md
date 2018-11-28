@@ -3,7 +3,7 @@ templateKey: portfolio-post
 title: IndexIQ ETFs Microsite
 description: A Single Page Application (SPA) built with CSS Grid
 date: 2018-11-21T20:06:44.920Z
-projectUrl: 'https://www.iqchaikinetfs.com'
+projectUrl: https://www.iqchaikinetfs.com
 blogpostUrl: null
 image: /img/indexiq-microsite.jpg
 imageAlt: indexiq microsite
