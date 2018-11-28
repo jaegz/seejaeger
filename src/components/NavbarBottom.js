@@ -16,13 +16,13 @@ export default class NavbarBottom extends Component {
           <Icon name='home' />
           Home
         </Menu.Item>
-        <Menu.Item as={Link} activeClassName='active' to='portfolio'>
-          <Icon name='folder open' />
-          Portfolio
-        </Menu.Item>
         <Menu.Item as={Link} activeClassName='active' to='blog'>
           <Icon name='file alternate' />
           Blog
+        </Menu.Item>
+        <Menu.Item as={Link} activeClassName='active' to='portfolio'>
+          <Icon name='folder open' />
+          Portfolio
         </Menu.Item>
         <Menu.Item as={Link} activeClassName='active' to='contact'>
           <Icon name='paper plane' />
