@@ -6,7 +6,7 @@ description: >-
   A collection of string and integer algorithms to practice while preparing for
   a technical interview. Useful for the following roles: Frontend Engineer,
   Frontend Developer, Full Stack Developer, Full Stack Engineer, Software
-  Engineer, Etc. Keep in mind that these are not the only solutions.
+  Engineer, etc. Keep in mind that these are not the only possible solutions.
 tags:
   - interviews
   - algorithms
