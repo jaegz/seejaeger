@@ -11,6 +11,12 @@ tags:
   - interviews
   - algorithms
 ---
+**Common String Questions**
+- Palindromes - does the string read the same forwards and reverse?
+- What is the most common character in a string?
+- Anagrams - does string A have the same characters as string B?
+- Does the given string have any repeated characters in it?
+
 **String Reversal**
 
 Write a function that when given a string, it returns the string in reverse.
