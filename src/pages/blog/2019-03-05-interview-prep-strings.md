@@ -3,7 +3,7 @@ templateKey: blog-post
 title: 'The Technical Interview: Reversals & Palindromes'
 date: 2019-03-05T20:06:10.853Z
 description: >-
-  A collection of common reversal manipulations to practice while preparing for
+  A collection of string and integer algorithms to practice while preparing for
   a technical interview. Useful for the following roles: Frontend Engineer,
   Frontend Developer, Full Stack Developer, Full Stack Engineer, Software
   Engineer, Etc. Keep in mind that these are not the only solutions.
