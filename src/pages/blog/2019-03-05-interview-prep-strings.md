@@ -1,14 +1,15 @@
 ---
 templateKey: blog-post
-title: 'Interview Prep: String Reversal & Palindromes'
+title: 'Interview Prep: Reversals & Palindromes'
 date: 2019-03-05T20:06:10.853Z
 description: >-
-  A collection of common String manipulations to practice while preparing for a
-  technical interview. Useful for the following roles: Frontend Engineer,
+  A collection of common reversal manipulations to practice while preparing for
+  a technical interview. Useful for the following roles: Frontend Engineer,
   Frontend Developer, Full Stack Developer, Full Stack Engineer, Software
   Engineer, Etc. Keep in mind that these are not the only solutions.
 tags:
-  - interview
+  - interviews
+  - algorithms
 ---
 **String Reversal**
 
@@ -49,8 +50,19 @@ function reverse(str){
 **Palindromes**
 
 Write a function that determines if a string is a palindrome and returns a boolean. A palindrome is a string that reads the same forward and reverse.
+
+Using any of the previous reversal methods
 ```js
 function palindrome(str){
   return str === [...str].reverse().join('');
+}
+```
+
+[Array.prototype.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+```js
+function palindrome(str){
+  return str === [...str].every((item, index) => {
+    return item === str[str.length - i - 1]
+  });
 }
 ```
