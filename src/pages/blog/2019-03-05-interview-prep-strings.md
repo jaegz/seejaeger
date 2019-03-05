@@ -19,7 +19,7 @@ Write a function that when given a string, it returns the string in reverse.
 
 A classic for loop would work here as well, but you are less likely to make syntactical mistakes with the for...of loop and you don't need to convert the string to an array.
 ```js
-function reverse(str){
+function reverse(str) {
   let reversed = '';
   for (let char of str) {
     reversed = character + reversed;
@@ -30,20 +30,20 @@ function reverse(str){
 
 [Array.prototype.reverse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
 ```js
-function reverse(str){
+function reverse(str) {
   return str.split('').reverse().join('');
 }
 ```
 Array.prototype.reverse() + [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 ```js
-function reverse(str){
+function reverse(str) {
   return [...str].reverse().join('');
 }
 ```
 Spread operator + [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 ```js
-function reverse(str){
-  return [...str].reduce((reversed, char) => char + reversed, '')
+function reverse(str) {
+  return [...str].reduce((reversed, char) => char + reversed, '');
 }
 ```
 
@@ -53,16 +53,16 @@ Write a function that determines if a string is a palindrome and returns a boole
 
 Using any of the previous reversal methods
 ```js
-function palindrome(str){
+function palindrome(str) {
   return str === [...str].reverse().join('');
 }
 ```
 
 [Array.prototype.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 ```js
-function palindrome(str){
+function palindrome(str) {
   return str === [...str].every((item, index) => {
-    return item === str[str.length - i - 1]
+    return item === str[str.length - i - 1];
   });
 }
 ```
@@ -73,8 +73,8 @@ Using [Number.prototype.toString()
 ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) and [parseInt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) to switch types and [Math.sign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign) to handle positive and negative values
 
 ```js
-function intReversed(n){
+function intReversed(n) {
   const nStr = n.toString();
   const nRev = [...nStr].reverse().join('');
-  return parseInt(nRev) * Math.sign(n)
+  return parseInt(nRev) * Math.sign(n);
 }
