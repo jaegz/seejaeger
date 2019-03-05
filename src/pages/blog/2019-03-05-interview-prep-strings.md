@@ -6,7 +6,7 @@ description: >-
   A collection of common String manipulations to practice while preparing for a
   technical interview. Useful for the following roles: Frontend Engineer,
   Frontend Developer, Full Stack Developer, Full Stack Engineer, Software
-  Engineer, Etc.
+  Engineer, Etc. Keep in mind that these are not the only solutions.
 tags:
   - interview
 ---
