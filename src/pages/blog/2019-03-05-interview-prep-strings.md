@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Interview Prep: Reversals & Palindromes'
+title: 'The Technical Interview: Reversals & Palindromes'
 date: 2019-03-05T20:06:10.853Z
 description: >-
   A collection of common reversal manipulations to practice while preparing for
