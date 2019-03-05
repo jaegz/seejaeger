@@ -66,3 +66,12 @@ function palindrome(str){
   });
 }
 ```
+
+**Positive/Negative Integer Reversal**
+
+Using [Math.sign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign) to handle positive and negative values
+
+```js
+function intReversed(n){
+  return Math.sign(n) * parseInt([...n].reverse());
+}
