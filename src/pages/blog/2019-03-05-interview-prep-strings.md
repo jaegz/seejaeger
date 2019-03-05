@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Interview Prep: Strings'
+title: 'Interview Prep: String Reversal & Palindromes'
 date: 2019-03-05T20:06:10.853Z
 description: >-
   A collection of common String manipulations to practice while preparing for a
@@ -12,15 +12,17 @@ tags:
 ---
 **String Reversal**
 
-[for...of loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+Write a function that when given a string, it returns the string in reverse.
+
+[for...of loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 
+
+A classic for loop would work here as well, but you are less likely to make syntactical mistakes with the for...of loop
 ```js
 function reverse(str){
   let reversed = '';
-
   for (let char of str) {
     reversed = character + reversed;
   }
-
   return reversed;
 }
 ```
@@ -41,5 +43,14 @@ Spread operator + [Array.prototype.reduce()](https://developer.mozilla.org/en-US
 ```js
 function reverse(str){
   return [...str].reduce((reversed, char) => char + reversed, '')
+}
+```
+
+**Palindromes**
+
+Write a function that determines if a string is a palindrome and returns a boolean. A palindrome is a string that reads the same forward and reverse.
+```js
+function palindrome(str){
+  return str === [...str].reverse().join('');
 }
 ```
