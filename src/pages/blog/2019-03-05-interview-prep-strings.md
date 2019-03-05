@@ -17,7 +17,7 @@ Write a function that when given a string, it returns the string in reverse.
 
 [for...of loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 
 
-A classic for loop would work here as well, but you are less likely to make syntactical mistakes with the for...of loop
+A classic for loop would work here as well, but you are less likely to make syntactical mistakes with the for...of loop and you don't need to convert the string to an array.
 ```js
 function reverse(str){
   let reversed = '';
