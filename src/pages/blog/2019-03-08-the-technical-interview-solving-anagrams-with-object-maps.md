@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'The Technical Interview: Solving Anagrams with Object Maps'
 date: 2019-03-07T00:06:11.530Z
-description: A collection of two different approaches for solving anagram questions.
+description: Two useful approaches for solving anagram questions.
 tags:
   - interviews
   - algorithms
