@@ -3,14 +3,20 @@ templateKey: blog-post
 title: 'The Technical Interview: Reversals & Palindromes'
 date: 2019-03-05T20:06:10.853Z
 description: >-
-  A collection of common reversal manipulations to practice while preparing for
+  A collection of string and integer algorithms to practice while preparing for
   a technical interview. Useful for the following roles: Frontend Engineer,
   Frontend Developer, Full Stack Developer, Full Stack Engineer, Software
-  Engineer, Etc. Keep in mind that these are not the only solutions.
+  Engineer, etc. Keep in mind that these are not the only possible solutions.
 tags:
   - interviews
   - algorithms
 ---
+**Common String Questions**
+- Palindromes - does the string read the same forwards and reverse?
+- What is the most common character in a string?
+- Anagrams - does string A have the same characters as string B?
+- Does the given string have any repeated characters in it?
+
 **String Reversal**
 
 Write a function that when given a string, it returns the string in reverse.
