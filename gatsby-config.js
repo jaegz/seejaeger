@@ -88,7 +88,6 @@ module.exports = {
         icon: 'src/img/cj-icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline', // make sure to list this after plugin-manifest
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
