@@ -4,3 +4,15 @@
 [build.environment]
   YARN_VERSION = "1.3.2"
   YARN_FLAGS = "--no-ignore-optional"
+
+[[redirects]]
+  from = "https://seejaeger.com/*"
+  to = "https://www.chrisjaeger.me/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.seejaeger.com/*"
+  to = "https://www.chrisjaeger.me/:splat"
+  status = 301
+  force = true
